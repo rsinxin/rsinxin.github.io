@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="我是一名前端工作者，这是我的个人博客，在这里记录分享我在前端开发中一些技术总结和遇到的一些问题以及相应的解决方案">
+<meta name="description" content="人生若只如初见 何事秋风悲画扇">
 <meta name="keywords" content="爱上杰">
 <meta property="og:type" content="website">
 <meta property="og:title" content="爱上杰">
 <meta property="og:url" content="http://rsinxin.github.io/index.html">
 <meta property="og:site_name" content="爱上杰">
-<meta property="og:description" content="我是一名前端工作者，这是我的个人博客，在这里记录分享我在前端开发中一些技术总结和遇到的一些问题以及相应的解决方案">
+<meta property="og:description" content="人生若只如初见 何事秋风悲画扇">
 <meta property="og:locale" content="zh-cn">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爱上杰">
-<meta name="twitter:description" content="我是一名前端工作者，这是我的个人博客，在这里记录分享我在前端开发中一些技术总结和遇到的一些问题以及相应的解决方案">
+<meta name="twitter:description" content="人生若只如初见 何事秋风悲画扇">
 
 
 
@@ -233,12 +233,804 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://rsinxin.github.io/2018/11/07/箭头函数和普通函数的区别/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rasin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱上杰">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/07/箭头函数和普通函数的区别/" itemprop="url">箭头函数与普通函数的区别</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-07T14:53:58+08:00">
+                2018-11-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="箭头函数与普通函数的区别"><a href="#箭头函数与普通函数的区别" class="headerlink" title="箭头函数与普通函数的区别"></a>箭头函数与普通函数的区别</h2><p>箭头函数：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fun = <span class="function">(<span class="params">a,b</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>普通函数<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fun = <span class="function"><span class="keyword">function</span> (<span class="params">a,b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>箭头函数相当于匿名函数，相当于普通一种简写方式。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//箭头函数有两种简写方式，</span></span><br><span class="line"><span class="keyword">let</span> fun = <span class="function">(<span class="params">a</span>)=&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> a</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//当只有一个参数时，可以省略()</span></span><br><span class="line"><span class="keyword">let</span> fun = <span class="function"><span class="params">a</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> a</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//当函数体只有一个 return 时，可以省略&#123;&#125;</span></span><br><span class="line"><span class="keyword">let</span> fun = <span class="function"><span class="params">a</span> =&gt;</span> a</span><br></pre></td></tr></table></figure>
+<h3 id="箭头函数不能作为构造函数，不能使用-new"><a href="#箭头函数不能作为构造函数，不能使用-new" class="headerlink" title="箭头函数不能作为构造函数，不能使用 new"></a>箭头函数不能作为构造函数，不能使用 new</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> ConstructorFun = <span class="function">(<span class="params">x</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.x = x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> cFun = <span class="keyword">new</span> ConstructorFun(<span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+<p><img src="/images/箭头函数.png" alt="pic"></p>
+<h3 id="箭头函数不含有-arguments"><a href="#箭头函数不含有-arguments" class="headerlink" title="箭头函数不含有 arguments"></a>箭头函数不含有 arguments</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun1</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line">fun1(<span class="number">1</span>,<span class="number">2</span>,<span class="number">35</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">9</span>)</span><br><span class="line"><span class="comment">// Arguments(6) [1, 2, 35, 6, 7, 9, callee: ƒ, Symbol(Symbol.iterator): ƒ]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> fun2 = <span class="function">(<span class="params">a</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line">fun2(<span class="number">1</span>,<span class="number">2</span>,<span class="number">21</span>,<span class="number">2</span>)</span><br><span class="line"><span class="comment">// Uncaught ReferenceError: arguments is not defined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> fun3 = <span class="function">(<span class="params">...arr</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(arr);</span><br><span class="line">&#125;</span><br><span class="line">fun3(<span class="number">21</span>,<span class="number">22</span>,<span class="number">34</span>)</span><br><span class="line"><span class="comment">// [21,22,34]</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>普通函数的 arguments 对象不是一个数组，但是可以通过下标的方式访问元素<br>  箭头函数可以通过参数解构的方式获取到传入的参数数组</p>
+</blockquote>
+<h3 id="箭头函数-this-指向与普通函数不同"><a href="#箭头函数-this-指向与普通函数不同" class="headerlink" title="箭头函数 this 指向与普通函数不同"></a>箭头函数 this 指向与普通函数不同</h3><p>///</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://rsinxin.github.io/2018/11/01/flex布局/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rasin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱上杰">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/01/flex布局/" itemprop="url">flex布局</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-01T11:06:00+08:00">
+                2018-11-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="flex布局是什么"><a href="#flex布局是什么" class="headerlink" title="flex布局是什么"></a>flex布局是什么</h2><blockquote>
+<p>Flex是Flexible Box的缩写，意为”弹性布局”，用来为盒状模型提供最大的灵活性。</p>
+</blockquote>
+<p>1.定义一个容器为 flex 布局</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="comment">/* 指定一个元素为 flex布局 */</span></span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="comment">/* 行内元素也可以使用 flex 布局 */</span></span><br><span class="line">  <span class="attribute">display</span>: inline-flex;</span><br><span class="line">  <span class="comment">/* webkie内核的浏览器，必须加上 webkit 前缀 */</span></span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意，设为Flex布局以后，子元素的float、clear和vertical-align属性将失效。</p>
+</blockquote>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ol>
+<li>容器：采用 flex 布局的元素，称为Flex容器，简称 容器</li>
+<li>项目：容器的所有子元素自动成为容器成员，称为 Flex 项目，简称 项目</li>
+</ol>
+<p><img src="/images/flex/main.png" alt="Image text"></p>
+<p>容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。</p>
+<p>项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。</p>
+<h2 id="容器的属性"><a href="#容器的属性" class="headerlink" title="容器的属性"></a>容器的属性</h2><p>在容器上主要有以下六个属性</p>
+<blockquote>
+<ul>
+<li>flex-direction</li>
+<li>flex-wrap</li>
+<li>flex-flow</li>
+<li>justify-content</li>
+<li>align-items</li>
+<li>align-content</li>
+</ul>
+</blockquote>
+<h3 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h3><p>flex-direction 属性决定主轴的方向<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">flex-direction</span>: row | row-reverse | column | column-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="/images/flex/flex-direction.png" alt="Image text"></p>
+<blockquote>
+<ul>
+<li>row (默认) 主轴为水平方向，起先为左端</li>
+<li>row-reverse 主轴为水平方向，起点为右端</li>
+<li>column 主轴为垂直方向，起点在上沿</li>
+<li>column-reverse 主轴为垂直方向，起点在下沿</li>
+</ul>
+</blockquote>
+<h3 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a>flex-wrap</h3><p>flex-wrap 属性绝对项目如何换行<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">flex-wrap</span>: nowrap | wrap | wrap-reverse;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<ul>
+<li>nowrap (默认) 不换行</li>
+<li>wrap 换行，第一行在上方</li>
+<li>wrap-reverse 换行，第一行在下方</li>
+</ul>
+</blockquote>
+<h3 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h3><p>flex-flow 属性是 flex-direction 和 flex-wrap 的简写<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">flex-flow</span>: &lt;flex-direction&gt; | &lt;flex-wrap&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h3><p>justify-content 属性是定义项目在主轴的对齐方式<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">justify-content</span>: flex-start | flex-end | center | space-between | space-around;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<ul>
+<li>flex-start (默认) 沿着主轴向左对齐</li>
+<li>flex-end 沿着主轴向右对齐</li>
+<li>center 居中</li>
+<li>space-between 两端对齐，项目之间的间隔相等</li>
+<li>space-around 每个项目两边的间隔相等，两端的间隔是项目之间间隔的一半</li>
+</ul>
+</blockquote>
+<h3 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h3><p>align-items 属性定义项目在交叉轴的对齐方式<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">align-items</span>: flex-start | flex-end | center | stretch | baseline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<ul>
+<li>flex-start 与交叉轴起点对齐</li>
+<li>flex-end 与交叉轴终点对齐</li>
+<li>center 与交叉轴中点对齐</li>
+<li>strctch (默认) 如果项目中未设置高度或者设置为auto，则占满容器高度</li>
+<li>baseline 项目的第一行文字的基线对齐</li>
+</ul>
+</blockquote>
+<h3 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h3><p>align-content 属性定义多跟轴线的对齐方式，如果只有一根轴线，则该属性不起作用<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">  <span class="attribute">align-content</span>: flex-start | flex-end | center | space-between | space-around | stretch;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<ul>
+<li>flex-start 与交叉轴起点对齐</li>
+<li>flex-end 与交叉轴终点对齐</li>
+<li>center 与交叉轴中线对齐</li>
+<li>space-between 在交叉轴两端对齐，项目之间间隔相等</li>
+<li>space-around  每个项目在交叉轴方向两端距离相等，两端的间隔是项目之间间隔的一半</li>
+<li>stretch (默认) 在交叉轴方向占据整个空间，如果除去所有行，还有剩余空间，则每一行平分剩余的空间</li>
+</ul>
+</blockquote>
+<h2 id="项目的属性"><a href="#项目的属性" class="headerlink" title="项目的属性"></a>项目的属性</h2><blockquote>
+<ul>
+<li>order</li>
+<li>flex-gorw</li>
+<li>flew-shrink</li>
+<li>flex-basis</li>
+<li>flex</li>
+<li>align-self</li>
+</ul>
+</blockquote>
+<h3 id="order"><a href="#order" class="headerlink" title="order"></a>order</h3><p>order 定义项目的排序方式，默认为0，值越小，排列越靠前<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  <span class="attribute">order</span>:&lt;number&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a>flex-grow</h3><p>flex-grow 定义项目的放大比例，有剩余空间的情况下，按比例等分剩余空间<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  <span class="attribute">flex-grow</span>: &lt;number&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>默认为 0，不放大</p>
+</blockquote>
+<h3 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h3><p>flex-shrink 定义项目的缩小比例，在空间不足时，项目将按比例缩小<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  <span class="attribute">flex-shrink</span>: &lt;number&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>默认为 1 ；当值为 1 时，此项目不缩小 ；负值无效</p>
+</blockquote>
+<h3 id="flex-basis"><a href="#flex-basis" class="headerlink" title="flex-basis"></a>flex-basis</h3><p>flex-basis 定义项目占据的主轴空间，浏览器会根据此属性，计算主轴是否还有多余空间<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  <span class="attribute">flex-basis</span>: &lt;length&gt; | auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>默认值 auto ，即项目的本来大小</p>
+</blockquote>
+<h3 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h3><p>flex 属性是一个简写<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  <span class="attribute">flex</span>: none | [&lt;flex-grow&gt; | &lt;flex-shrink&gt; | &lt;flex-basis&gt;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>默认值 为 none（0 0 auto）<br>快捷键 auto （1 1 auto）</p>
+</blockquote>
+<h3 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h3><p>align-self 属性代表允许项目与其他项目有不一样的对齐方式<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item</span>&#123;</span><br><span class="line">  <span class="attribute">align-self</span>: flex-start | flex-end | center | baseline | stretch | auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<ul>
+<li>flex-start 沿主轴开端对齐</li>
+<li>flex-end 沿主轴终点对齐</li>
+<li>center 沿主轴中点对齐</li>
+<li>baseline 沿每个项目第一行文字的基线对齐</li>
+<li>stretch 沿交叉轴方法拉伸到最大长度</li>
+<li>auto 默认值，代表继承容器中的 align-items 属性，如果容器未设置该属性，则等同与设置stretch属性</li>
+</ul>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://rsinxin.github.io/2018/10/29/构造函数中的this与return/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rasin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱上杰">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/29/构造函数中的this与return/" itemprop="url">构造函数中的 this 与 return</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-29T10:18:28+08:00">
+                2018-10-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="构造函数new一个新对象时，this发生了什么"><a href="#构造函数new一个新对象时，this发生了什么" class="headerlink" title="构造函数new一个新对象时，this发生了什么"></a>构造函数new一个新对象时，this发生了什么</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Car</span>(<span class="params">color,owner</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.color = color;</span><br><span class="line">    <span class="keyword">this</span>.owner = owner;</span><br><span class="line">&#125;</span><br><span class="line">Car.prototype.name = <span class="string">'BMW'</span>;</span><br><span class="line">Car.prototype.length = <span class="number">4600</span>;</span><br><span class="line">Car.prototype.detail = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">'车名为：'</span> + <span class="keyword">this</span>.name + <span class="string">',长度为'</span> + <span class="keyword">this</span>.length</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> car = <span class="keyword">new</span> Car(<span class="string">'red'</span>,<span class="string">'rasin'</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>1.创建了一个新对象 var obj = {}<br>2.将 Car 中的 this 关键字指向 obj<br>3.将 obj 的 <strong>proto</strong> 对象指向 Car 的 prototype 对象,这样 obj 就拥有了 Car原型中的方法<br>4.分别给 obj 的 color 和 owner 属性赋值<br>5.返回 obj 对象</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//执行完之后</span></span><br><span class="line"><span class="keyword">var</span> car = &#123;</span><br><span class="line">    color : <span class="string">'red'</span>,</span><br><span class="line">    owner : <span class="string">'rasin'</span>,</span><br><span class="line">    __proto__ : Car.prototype    <span class="comment">// 隐式属性</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="构造函数的返回值-return"><a href="#构造函数的返回值-return" class="headerlink" title="构造函数的返回值 return"></a>构造函数的返回值 return</h2><p>构造函数默认是返回this指向的对象，那么存在return时，有两种情况</p>
+<blockquote>
+<ol>
+<li>返回值为 number，string，boolean，undefined，null 时，会忽视返回值，仍然返回this</li>
+</ol>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fun</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = <span class="string">'rasin'</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">100</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Fun()</span><br><span class="line"><span class="built_in">console</span>.log(obj);</span><br><span class="line"><span class="comment">// 打印出</span></span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//    name : 'rasin'</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol start="2">
+<li>返回值为一个 object 对象时，会返回这个对象</li>
+</ol>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fun</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = <span class="string">'rasin'</span></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    name : <span class="string">'hahaha'</span>,</span><br><span class="line">    age : <span class="number">25</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Fun()</span><br><span class="line"><span class="built_in">console</span>.log(obj);</span><br><span class="line"><span class="comment">// 打印出</span></span><br><span class="line"><span class="comment">// &#123;</span></span><br><span class="line"><span class="comment">//   name : 'hahaha',</span></span><br><span class="line"><span class="comment">//   age : 25</span></span><br><span class="line"><span class="comment">// &#125;</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://rsinxin.github.io/2018/10/18/布局/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rasin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱上杰">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/18/布局/" itemprop="url">css 布局</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-18T14:23:36+08:00">
+                2018-10-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="css布局"><a href="#css布局" class="headerlink" title="css布局"></a>css布局</h2><h3 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://rsinxin.github.io/2018/10/16/正则表达式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="rasin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/timg.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="爱上杰">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/16/正则表达式/" itemprop="url">js 正则表达式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-16T16:56:52+08:00">
+                2018-10-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="js-中正则表达式基本用法"><a href="#js-中正则表达式基本用法" class="headerlink" title="js 中正则表达式基本用法"></a>js 中正则表达式基本用法</h2><blockquote>
+<p>正则表达式是由一个字符序列形成的搜索模式。<br>当你在文本中搜索数据时，你可以用搜索模式来描述你要查询的内容。正则表达式可以是一个简单的字符，或一个更复杂的模式，可用于所有文本搜索和文本替换的操作。</p>
+</blockquote>
+<p>正则表达式的语法很简单，就是由主体和修饰符组成</p>
+<blockquote>
+<p>/pattern(正则表达式主体)/modifiers(修饰符,可选)</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> patt=<span class="keyword">new</span> <span class="built_in">RegExp</span>(pattern,modifiers);</span><br><span class="line"></span><br><span class="line"><span class="comment">//或者更简单的方式:</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> patt=<span class="regexp">/pattern/m</span>odifiers;</span><br></pre></td></tr></table></figure>
+<h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><p>修饰符比较简单，先介绍修饰符比较好</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">修饰符</th>
+<th style="text-align:center">全称</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">i</td>
+<td style="text-align:center">ignore</td>
+<td style="text-align:center">对大小写不敏感</td>
+</tr>
+<tr>
+<td style="text-align:center">g</td>
+<td style="text-align:center">global</td>
+<td style="text-align:center">全局查找</td>
+</tr>
+<tr>
+<td style="text-align:center">m</td>
+<td style="text-align:center">multiple</td>
+<td style="text-align:center">执行多行匹配</td>
+</tr>
+</tbody>
+</table>
+<h3 id="方括号"><a href="#方括号" class="headerlink" title="方括号"></a>方括号</h3><p>方括号用于查找在某个范围内的字符</p>
+<blockquote>
+<p>[abc] ：表示在方括号之间的任何字符<br>[^abc] : 表示不在方括号之间的任何字符<br>[0-9] : 表示 0~9 之间的任何字符<br>[a-z] : 表示 a~z 之间的任何字符<br>[A-Z] : 表示 A~Z 之间的任何字符<br>[A-z] : 表示 A~z 之间的任何字符</p>
+</blockquote>
+<h3 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h3><p>元字符是拥有特殊含义的字符</p>
+<blockquote>
+<p>\w 查找单词字符<br> \W 查找非单词字符<br> \d 查找数字字符<br> \D 查找非数字字符<br> \s 查找空白字符<br> \S 查找非空白字符<br> \b 匹配单词边界<br> \B 匹配非单词边界</p>
+</blockquote>
+<h3 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h3><blockquote>
+<p>n+ : 匹配 n 出现的次数为  &gt;=1<br>n* : 匹配 n 出现的次数为 &gt;=1<br>n? : 匹配 n 出现的次数为 0 或者 1<br>n{X} : 匹配 n 出现的次数为 =X<br>n{X,} : 匹配 n 出现的次数为 &gt;=X<br>n{X,Y} : 匹配 n 出现的次数为  X&lt;=n&lt;=Y<br>n$  : 以 n 结尾的字符串<br>^n : 以 n 开头的字符串<br>?=n : 匹配任何其后紧接指定字符串 n 的字符串<br>?!n : 匹配任何其后没有紧接指定字符串 n 的字符串</p>
+</blockquote>
+<h3 id="正则表达式对象方法"><a href="#正则表达式对象方法" class="headerlink" title="正则表达式对象方法"></a>正则表达式对象方法</h3><blockquote>
+<p>exec : 检索字符串中指定的值,返回找到的值,并确定其位置<br>test : 检索字符串中指定的值,返回 true 或 false<br>/abc/.test(‘ ab abc acd’)     返回值为 true<br>toString : 返回正则表达式的字符串</p>
+</blockquote>
+<h3 id="支持正则表达式的String对象的方法"><a href="#支持正则表达式的String对象的方法" class="headerlink" title="支持正则表达式的String对象的方法"></a>支持正则表达式的String对象的方法</h3><blockquote>
+<p>search : 检索与正则表达式相匹配的值<br>‘abcd’.search(‘bc’)    返回值为1<br>match : 找到一个或多个正则表达式的匹配<br>‘a1jka2’.match(/a[0-9]/g)   返回值为 [‘a1’,’a2’]<br>replace : 替换与正则表达式向匹配的字符串<br>‘ a b c ‘.replace(/^\s|\s$/g) 返回值为 ‘a b c’<br>split : 把字符串分割成字符串数组<br>‘ a b c ‘.split(/\s/g)  返回值为 [‘a’,’b’,’c’]</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://rsinxin.github.io/2018/10/15/vue通信方式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rasin">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/timg.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -403,7 +1195,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rasin">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/timg.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -529,7 +1321,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="rasin">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/timg.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -673,8 +1465,12 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/images/timg.jpg"
+                alt="rasin" />
+            
               <p class="site-author-name" itemprop="name">rasin</p>
-              <p class="site-description motion-element" itemprop="description">我是一名前端工作者，这是我的个人博客，在这里记录分享我在前端开发中一些技术总结和遇到的一些问题以及相应的解决方案</p>
+              <p class="site-description motion-element" itemprop="description">人生若只如初见 何事秋风悲画扇</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -684,7 +1480,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -742,7 +1538,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
@@ -756,7 +1552,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.5k</span>
+    <span title="Site words total count">4.0k</span>
   
 </div>
 
@@ -787,7 +1583,7 @@
 
  <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.5k字 </span>
+  <span class="post-count">博客全站共4.0k字 </span>
 </div>
 
 
